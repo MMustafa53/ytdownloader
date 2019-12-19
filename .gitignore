@@ -76,12 +76,4 @@ fabric.properties
 .idea/modules.xml
 .idea/vcs.xml
 .idea/ytdownloader.iml
-ytdownloader/react/.gitignore
-ytdownloader/react/.idea/
-ytdownloader/react/README.md
-ytdownloader/react/package-lock.json
-ytdownloader/react/package.json
-ytdownloader/react/public/
-ytdownloader/react/src/
-ytdownloader/src/main/resources/static/
-ytdownloader/src/main/resources/templates/
+
