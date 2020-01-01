@@ -64,7 +64,7 @@ public class Controller {
         Runtime rt = Runtime.getRuntime();
         try {
             ProcessBuilder builder = new ProcessBuilder(
-                    "python3", "/home/mpvrisavant/IdeaProjects/ytd/src/main/java/mypack/dw.py", url);
+                    "python3", "/home/ytdownloader/ytd/src/main/java/mypack/dw.py", url);
             System.out.println(builder.command());
             builder.redirectErrorStream(true);
             Process p = builder.start();
