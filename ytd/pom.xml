@@ -55,6 +55,31 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+	    <plugin>
+		<groupId>org.example.ytd</groupId>
+		<artifactId>docker-maven-plugin</artifactId>
+		<version>0.4.5</version>
+		<configuration>
+			<imageName>mcy-sb-dockerize-with-maven</imageName>
+			<baseImage>anapsix/alpine-java</baseImage>
+			<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+			<resources>
+				<resource>
+					<targetPath>/</targetPath>
+					<directory>${project.build.directory}</directory>
+					<include>${project.build.finalName}.jar</include>
+				</resource>
+			</resources>
+		</configuration>
+	    </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <configuration>
+                    <mainClass>mypack.YtdownloaderApplication</mainClass>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
