@@ -57,7 +57,7 @@ public class Controller {
     }
 
     public ModelAndView method() {
-        return new ModelAndView("redirect:" + "http://localhost:3000");
+        return new ModelAndView("redirect:" + "http://localhost:5000");
     }
 
     public void getVideo(String url) throws Exception {
